@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Visual Library of Precision | Clean Cut Barber Shop Phoenix</title>
+    <meta name="description" content="View our portfolio of precision cuts, skin fades, and master grooming. Real work from the brothers at Clean Cut Barber Shop on Bell Road.">
+    <link rel="stylesheet" href="/src/index.css">
+</head>
+<body class="bg-brand-bg text-brand-text antialiased selection:bg-brand-accent selection:text-brand-bg">
+
+    <div class="cinematic-foundation">
+        <div class="grain"></div>
+        <div class="vignette"></div>
+        <div class="ambient-glow"></div>
+    </div>
+
+    <nav class="luxury-nav z-[5000] flex justify-between items-center bg-transparent transition-all duration-700">
+        <a href="/" class="label text-xl tracking-[0.6em] font-bold text-brand-text">CLEAN CUT</a>
+        <div class="hidden md:flex space-x-12">
+            <a href="/about.html" class="label hover:text-brand-accent transition-colors">Legacy</a>
+            <a href="/services.html" class="label hover:text-brand-accent transition-colors">Services</a>
+            <a href="/gallery.html" class="label hover:text-brand-accent transition-colors text-brand-accent">Visuals</a>
+            <a href="/book.html" class="label hover:text-brand-accent transition-colors">Reserve</a>
+        </div>
+        <div class="md:hidden flex items-center">
+            <button id="menu-toggle" class="label text-sm px-4 py-2 border border-white/10 rounded-full bg-brand-bg/50 backdrop-blur-md">Menu</button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu">
+        <a href="/">Home</a>
+        <a href="/about.html">Legacy</a>
+        <a href="/services.html">Services</a>
+        <a href="/gallery.html">Visuals</a>
+        <a href="/book.html">Reserve</a>
+    </div>
+
+    <main>
+        <section class="relative h-[65vh] w-full flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="/src/assets/images/regenerated_image_1778337789227.jpg" class="w-full h-full object-cover" alt="Barbering Portfolio">
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+            <div class="relative z-20 text-center px-8 max-w-4xl">
+                <div class="reveal-wrap mb-6">
+                    <span class="label text-brand-accent tracking-[0.6em] reveal-text uppercase text-xs" style="transition-delay: 0.1s;">Visualizing Grooming Mastery</span>
+                </div>
+                <h1 class="text-[12vw] md:text-[8vw] italic tracking-tighter leading-none mb-10 flex flex-col items-center">
+                    <div class="reveal-wrap font-bold">
+                        <span class="reveal-text uppercase" style="transition-delay: 0.2s;">Precision</span>
+                    </div>
+                    <div class="reveal-wrap font-bold -mt-2">
+                        <span class="reveal-text text-brand-accent uppercase" style="transition-delay: 0.3s;">In Focus</span>
+                    </div>
+                </h1>
+                <div class="reveal-wrap mb-12">
+                    <p class="reveal-text text-brand-text/60 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed" style="transition-delay: 0.5s;">
+                        Browse our gallery of elite hair transformations. From classic tapers to contemporary textured styles, see why Clean Cut is synonymous with the best haircut results in the Valley.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="luxury-section container mx-auto">
+            <div class="max-w-4xl mb-32 reveal-stagger">
+                <div class="reveal-wrap mb-6">
+                    <h2 class="label text-brand-accent tracking-widest reveal-text">Captured Precision</h2>
+                </div>
+                <p class="text-2xl font-light italic opacity-60 reveal-text">
+                    Real work. Real brothers. Handcrafted profiles from our Bell Road location.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 reveal-stagger">
+                <!-- Large Feature -->
+                <div class="md:col-span-8 zoom-container reveal-item aspect-video bg-brand-graphite">
+                    <img src="/src/assets/images/regenerated_image_1778326581030.jpg" 
+                         class="w-full h-full object-cover grayscale brightness-75 transition-all duration-1000 hover:grayscale-0 hover:brightness-100" alt="Master Cut">
+                </div>
+                <!-- Vertical -->
+                <div class="md:col-span-4 zoom-container reveal-item aspect-[3/4] bg-brand-graphite">
+                    <img src="/src/assets/images/regenerated_image_1778326581814.jpg" 
+                         class="w-full h-full object-cover grayscale brightness-75 transition-all duration-1000 hover:grayscale-0 hover:brightness-100" alt="Skin Fade">
+                </div>
+                <!-- Box -->
+                <div class="md:col-span-4 zoom-container reveal-item aspect-square bg-brand-graphite">
+                    <img src="/src/assets/images/regenerated_image_1778326583697.jpg" 
+                         class="w-full h-full object-cover grayscale brightness-75 transition-all duration-1000 hover:grayscale-0 hover:brightness-100" alt="Beard Sculpt">
+                </div>
+                <!-- Large Horizontal -->
+                <div class="md:col-span-8 zoom-container reveal-item aspect-[2/1] bg-brand-graphite">
+                    <img src="/src/assets/images/regenerated_image_1778326583079.jpg" 
+                         class="w-full h-full object-cover grayscale brightness-75 transition-all duration-1000 hover:grayscale-0 hover:brightness-100" alt="Kids Styling">
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Page Teaser -->
+        <section class="relative h-[80vh] w-full group overflow-hidden">
+            <a href="/book.html" class="absolute inset-0 flex items-center justify-center">
+                <img src="/src/assets/images/regenerated_image_1778326584680.jpg" 
+                     class="absolute inset-0 w-full h-full object-cover brightness-[0.4] group-hover:scale-110 transition-transform duration-[3s]" alt="Next Page">
+                <div class="relative z-10 text-center">
+                    <span class="label text-brand-accent tracking-[1em] mb-8 block opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-1000 uppercase text-[10px]">Next: Reserve</span>
+                    <h2 class="text-[8vw] italic text-brand-text">The Encounter</h2>
+                </div>
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="pt-48 pb-12 bg-brand-bg px-8 md:px-20 border-t border-brand-muted/10">
+        <div class="container mx-auto">
+        <!-- Shop Location Map Section -->
+        <section class="max-w-7xl mx-auto px-8 md:px-20 mb-32 reveal-item">
+            <div class="reveal-wrap mb-12 text-center md:text-left">
+                <span class="label text-brand-accent tracking-[1em] mb-4 block reveal-text">Our Grounds</span>
+                <h2 class="text-4xl md:text-6xl italic tracking-tighter reveal-text">North Phoenix.</h2>
+            </div>
+            <div class="h-[400px] md:h-[600px] w-full bg-brand-graphite border border-white/5 relative group overflow-hidden">
+                <div id="shop-map-footer" class="w-full h-full"></div>
+                <div class="absolute inset-0 pointer-events-none border border-white/10 z-10"></div>
+                <div class="absolute inset-0 bg-brand-accent/5 pointer-events-none mix-blend-overlay"></div>
+            </div>
+        </section>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16">
+                <div class="md:col-span-2">
+                    <h5 class="label text-2xl mb-8">CLEAN CUT</h5>
+                    <p class="text-xl font-light opacity-60 leading-relaxed max-w-sm">Every line tells a story of brotherhood. Phoenix's premier barber shop since 2015.</p>
+                </div>
+                <div>
+                    <h6 class="label text-xs text-brand-accent mb-8">Location</h6>
+                    <p class="text-sm leading-loose opacity-60">743 Bell Road, Suite 3<br>Phoenix, AZ 85022</p>
+                </div>
+                <div>
+                    <h6 class="label text-xs text-brand-accent mb-8">Hours</h6>
+                    <ul class="text-sm leading-loose opacity-60 text-right">
+                        <li>Mon–Sat / 09:00 – 19:00</li>
+                        <li>Sun / 10:00 – 17:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
