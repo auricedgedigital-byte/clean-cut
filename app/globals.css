@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-inter: var(--font-inter);
+  
+  --color-brand-bg: #080808;
+  --color-brand-text: #F8F5F2;
+  --color-brand-accent: #C5A059;
+  --color-brand-graphite: #1A1A1C;
+  --color-brand-muted: rgba(255, 255, 255, 0.05);
+  --color-brand-amber: rgba(197, 160, 89, 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .heading-serif {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.65rem;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--color-brand-bg); }
+  ::-webkit-scrollbar-thumb { background: var(--color-brand-accent); }
+}
+
+@layer components {
+  .luxury-section {
+    @apply py-32 md:py-48 px-8 md:px-20;
+  }
+
+  .btn-luxury {
+    @apply relative px-10 py-5 bg-transparent border border-brand-accent/30 overflow-hidden transition-all duration-700 flex items-center justify-center;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+  }
+
+  .btn-glow {
+    @apply absolute inset-0 bg-brand-accent opacity-0 transition-opacity duration-700 blur-xl;
+  }
+
+  .btn-luxury:hover .btn-glow {
+    @apply opacity-20;
+  }
+
+  .glass-card {
+    @apply bg-white/[0.02] backdrop-blur-3xl border border-white/5 p-12 transition-all duration-700 relative overflow-hidden;
+  }
+
+  .glass-card:hover {
+    @apply border-brand-accent/30;
+  }
+
+  .cinematic-divider {
+    @apply w-full h-[1px] bg-brand-accent/30 transition-all duration-[1.5s] ease-out mx-auto;
+  }
+
+  .animate-ken-burns {
+    animation: ken-burns 30s ease-in-out infinite alternate;
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+}
+
+@keyframes ken-burns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.1) translate(-2%, -2%); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.2; transform: translateY(0); }
+  50% { opacity: 0.8; transform: translateY(10px); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.cinematic-foundation {
+  @apply fixed inset-0 pointer-events-none z-[999];
+}
+
+.grain {
+  @apply absolute inset-0 opacity-[0.05];
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.vignette {
+  @apply absolute inset-0;
+  background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.4) 100%);
+}
+
+.vignette-heavy {
+  @apply absolute inset-0;
+  background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.8) 100%);
+}
+
+.ambient-glow {
+  @apply absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full blur-[150px] bg-brand-amber opacity-40;
+}
+
+.ambient-glow-amber {
+  @apply absolute rounded-full blur-[250px] bg-brand-accent opacity-10;
+}
