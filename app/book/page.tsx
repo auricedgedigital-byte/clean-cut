@@ -21,15 +21,17 @@ export default function BookPage() {
   };
 
   const calendarUrl = () => {
-    const title = encodeURIComponent("Barber Appointment @ Clean Cut");
-    const details = encodeURIComponent(`Master: ${formData.master}`);
-    const location = encodeURIComponent("743 Bell Road, Suite 3, Phoenix, AZ 85022");
-    return `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}`;
+    const master = formData.master;
+    const eventTitle = encodeURIComponent("Haircut Appointment at Clean Cut");
+    const eventDetails = encodeURIComponent(`Appointment with ${master} at Clean Cut Barbershop\n\nAddress: 743 Bell Road, Suite 3, Phoenix, AZ 85022`);
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&details=${eventDetails}&location=743%20Bell%20Road%2C%20Suite%203%2C%20Phoenix%2C%20AZ%2085022`;
   };
 
   const whatsappUrl = () => {
-    const message = encodeURIComponent(`Hi, I'd like to confirm my booking at Clean Cut for ${formData.name}. Master: ${formData.master}.`);
-    return `https://wa.me/16020000000?text=${message}`;
+    const { name, phone, master } = formData;
+    const shopWhatsApp = "16025551234"; // TODO: Replace with actual Clean Cut WhatsApp number
+    const message = `New Booking Request!%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AMaster: ${encodeURIComponent(master)}%0A%0AClean Cut Barbershop`;
+    return `https://wa.me/${shopWhatsApp}?text=${message}`;
   };
 
   return (
