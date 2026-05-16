@@ -52,9 +52,15 @@ export default function Footer() {
               <h2 className="text-4xl md:text-6xl italic tracking-tighter">North Phoenix.</h2>
             </div>
             <div className="h-[400px] md:h-[600px] w-full bg-brand-graphite border border-white/5 relative group overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center opacity-20 italic">
-                743 Bell Road, Suite 3, Phoenix, AZ 85022
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.695749604126!2d-112.063637!3d33.63913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b6e3dbbe35483%3A0xa2e19f18ba4e3000!2s743%20Bell%20Rd%20%233%2C%20Phoenix%2C%20AZ%2085022!5e0!3m2!1sen!2sus!4v1778928813063!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: "grayscale(1) invert(0.9) contrast(1.2)" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
               <div className="absolute inset-0 pointer-events-none border border-white/10 z-10"></div>
               <div className="absolute inset-0 bg-brand-accent/5 pointer-events-none mix-blend-overlay"></div>
             </div>
