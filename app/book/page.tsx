@@ -16,8 +16,15 @@ export default function BookPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Construct WhatsApp message
+    const message = encodeURIComponent(`*New Booking Request*\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Master:* ${formData.master}`);
+    const whatsappUrl = `https://wa.me/16020000000?text=${message}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
     setIsSubmitted(true);
-    // In a real app, you would send this to an API
   };
 
   const calendarUrl = () => {
@@ -28,7 +35,7 @@ export default function BookPage() {
   };
 
   const whatsappUrl = () => {
-    const message = encodeURIComponent(`Hi, I'd like to confirm my booking at Clean Cut for ${formData.name}. Master: ${formData.master}.`);
+    const message = encodeURIComponent(`*New Booking Request*\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Master:* ${formData.master}`);
     return `https://wa.me/16020000000?text=${message}`;
   };
 

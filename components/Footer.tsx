@@ -45,7 +45,7 @@ export default function Footer() {
 
       <footer className="pt-48 pb-12 bg-brand-bg px-8 md:px-20 border-t border-brand-muted">
         <div className="container mx-auto">
-          {/* Shop Location Map Placeholder */}
+          {/* Shop Location Map */}
           <section className="max-w-7xl mx-auto px-8 md:px-20 mb-32">
             <div className="mb-12 text-center md:text-left">
               <span className="label text-brand-accent tracking-[1em] mb-4 block">Our Grounds</span>
